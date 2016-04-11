@@ -7,21 +7,22 @@
     >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="62sp"
         android:text="_ _ _ _ _"
-        android:id="@+id/textView"
+        android:id="@+id/palabraConGuiones"
         android:layout_gravity="center_horizontal|top"
         android:layout_row="1"
-        android:layout_column="1" />
+        android:layout_column="1"
+        android:gravity="center_vertical|center_horizontal" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="15"
-        android:id="@+id/imageView"
+        android:id="@+id/imagenAhorcado"
         android:layout_gravity="center_horizontal|top"
         android:src="@drawable/ahorcado_0"
         android:layout_row="2"
