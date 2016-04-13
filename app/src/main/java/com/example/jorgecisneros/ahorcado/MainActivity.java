@@ -12,6 +12,11 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    String palabraOculta = "";
+
+    // contador para saber el número de fallos
+    int numeroFallos = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,22 +26,41 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.ventanaJuego, new VentanaAhorcado())
                     .commit();
-            //cambiaImagenAhorcado();
-            eligePalabraOculta();
-            //pintaGuionesEnLabel();
+
+        }
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        //llamo al modelo para que genere una palabra aleatoria
+        palabraOculta = eligePalabraOculta();
+
+        //el método que pone tantos guiones como letras
+        //tiene la palabra aleatoria lo tendremos que llamar en otro sitio
+        //porque en este punto todavía no existe en la pantalla la vista
+        pintaGuionesEnLabel();
+    }
+
+    private void pintaGuionesEnLabel(){
+
+        TextView texto = (TextView) findViewById( R.id.palabraConGuiones);
+        texto.setText("");
+        for (int i=0; i<palabraOculta.length(); i++){
+            texto.setText(texto.getText().toString() + "_ ");
         }
     }
 
     public void botonPulsado (View vista){
         Button boton = (Button) findViewById(vista.getId());
-        boton.setVisibility(View.INVISIBLE);
 
         if (boton.isEnabled()){
             //cambio a minúsculas la letra del botón
             String letra = boton.getText().toString().toLowerCase();
             System.out.println(letra);
             boton.setEnabled(false);
-            TextView texto = (TextView)findViewById(R.id.palabraConGuiones);
+            TextView texto = (TextView) findViewById( R.id.palabraConGuiones);
+
             String palabraConGuiones = texto.getText().toString();
 
             if (palabraOculta.contains(letra)){
@@ -62,44 +86,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
-        else{
-            boton.setEnabled(false);
-        }
         cambiaImagenAhorcado();
+
+
+
+
+
     }
 
-    String palabraOculta = "";
-
-    // contador para saber el número de fallos
-    int numeroFallos = 0;
-
-    private void eligePalabraOculta(){
-        String [] listaDePalabras = new String[10];
-        Random r = new Random();
-
-        listaDePalabras[0] = "tal";
-        listaDePalabras[1] = "taluno";
-        listaDePalabras[2] = "taldos";
-        listaDePalabras[3] = "taltres";
-        listaDePalabras[4] = "talcuatro";
-        listaDePalabras[5] = "talcinco";
-        listaDePalabras[6] = "talseis";
-        listaDePalabras[7] = "talsiete";
-        listaDePalabras[8] = "talocho";
-        listaDePalabras[9] = "talnueve";
-
-
-        palabraOculta = listaDePalabras[r.nextInt(9)];
-        System.out.println(palabraOculta);
-    }
-
-    private void pintaGuionesEnLabel(){
-        TextView texto = (TextView)findViewById(R.id.palabraConGuiones);
-        texto.setText("");
-        for (int i=0; i<palabraOculta.length(); i++){
-            texto.setText(texto.getText() + "_ ");
-        }
-    }
 
     private void cambiaImagenAhorcado(){
 
@@ -116,12 +110,36 @@ public class MainActivity extends AppCompatActivity {
             case -1 : ahorcadoImagen.setImageResource(R.drawable.acertastetodo); break;
             default : ahorcadoImagen.setImageResource(R.drawable.ahorcado_fin); break;
         }
+        //después del switch, tendremos en nombreImagen el nombre correcto
+        //de la imagen que tenemos que mostrar dependiendo del numero de fallos
+
 
     }
 
 
-    //private void chequeaLetra(JButton boton){
 
-    //}
+    /*
+    eligePalabraOculta es el "modelo" de nuestra app
+    contiene los datos, en este caso un array de 10 strings
+     */
+    private String eligePalabraOculta(){
+        String [] listaDePalabras = new String[10];
+        Random r = new Random();
+
+        listaDePalabras[0] = "tal";
+        listaDePalabras[1] = "taluno";
+        listaDePalabras[2] = "taldos";
+        listaDePalabras[3] = "taltres";
+        listaDePalabras[4] = "talcuatro";
+        listaDePalabras[5] = "talcinco";
+        listaDePalabras[6] = "talseis";
+        listaDePalabras[7] = "talsiete";
+        listaDePalabras[8] = "talocho";
+        listaDePalabras[9] = "talnueve";
+
+
+        return listaDePalabras[r.nextInt(9)];
+        //System.out.println(palabraOculta);
+    }
 
 }
