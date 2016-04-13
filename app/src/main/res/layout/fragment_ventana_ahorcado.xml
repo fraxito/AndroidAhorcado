@@ -46,37 +46,43 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="B"
-            android:id="@+id/buttonB" />
+            android:id="@+id/buttonB"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="C"
-            android:id="@+id/buttonC" />
+            android:id="@+id/buttonC"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="D"
-            android:id="@+id/buttonD" />
+            android:id="@+id/buttonD"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="E"
-            android:id="@+id/buttonE" />
+            android:id="@+id/buttonE"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="F"
-            android:id="@+id/buttonF" />
+            android:id="@+id/buttonF"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="G"
-            android:id="@+id/buttonG" />
+            android:id="@+id/buttonG"
+            android:onClick="botonPulsado" />
     </LinearLayout>
 
 
@@ -98,37 +104,43 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="I"
-            android:id="@+id/buttonI" />
+            android:id="@+id/buttonI"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="J"
-            android:id="@+id/buttonJ" />
+            android:id="@+id/buttonJ"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="K"
-            android:id="@+id/buttonK" />
+            android:id="@+id/buttonK"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="L"
-            android:id="@+id/buttonL" />
+            android:id="@+id/buttonL"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="M"
-            android:id="@+id/buttonM" />
+            android:id="@+id/buttonM"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="N"
-            android:id="@+id/buttonN" />
+            android:id="@+id/buttonN"
+            android:onClick="botonPulsado" />
     </LinearLayout>
 
     <LinearLayout
@@ -141,7 +153,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Ñ"
-            android:id="@+id/buttonENHE" />
+            android:id="@+id/buttonENHE"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -154,31 +167,36 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="P"
-            android:id="@+id/buttonP" />
+            android:id="@+id/buttonP"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Q"
-            android:id="@+id/buttonQ" />
+            android:id="@+id/buttonQ"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="R"
-            android:id="@+id/buttonR" />
+            android:id="@+id/buttonR"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="S"
-            android:id="@+id/buttonS" />
+            android:id="@+id/buttonS"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="T"
-            android:id="@+id/buttonT" />
+            android:id="@+id/buttonT"
+            android:onClick="botonPulsado" />
 
     </LinearLayout>
 
@@ -200,13 +218,15 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="V"
-            android:id="@+id/buttonV" />
+            android:id="@+id/buttonV"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="W"
-            android:id="@+id/buttonW" />
+            android:id="@+id/buttonW"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -218,18 +238,21 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="X"
-            android:id="@+id/buttonX" />
+            android:id="@+id/buttonX"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Y"
-            android:id="@+id/buttonY" />
+            android:id="@+id/buttonY"
+            android:onClick="botonPulsado" />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Z"
-            android:id="@+id/buttonZ" />
+            android:id="@+id/buttonZ"
+            android:onClick="botonPulsado" />
     </LinearLayout>
 </LinearLayout>
